@@ -11,6 +11,10 @@ public class Tester {
             System.out.println(Arrays.toString(a));
             System.out.println(Arrays.toString(b));
             System.out.println(Arrays.toString(c));
+
+            int[] d = {64, 25, 12, 22, 11};
+            Sorts.selectionSort(d);
+            System.out.println(Arrays.toString(d));
       }
 
 }
