@@ -23,4 +23,22 @@ public class Sorts{
       p += 1;
     }
   }
+
+  public static void selectionSort(int[] data){
+    int i = 0;
+    while (i < data.length){
+      int x = i;
+      int result = i;
+      while (x < data.length){
+        if (data[result]>data[x]){
+          result = x;
+        }
+        x += 1;
+      }
+      int temp = data[i];
+      data[i] = data[result];
+      data[result] = temp;
+      i += 1;
+    }
+  }
 }
