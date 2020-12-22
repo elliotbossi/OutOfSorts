@@ -15,6 +15,10 @@ public class Tester {
             int[] d = {64, 25, 12, 22, 11};
             Sorts.selectionSort(d);
             System.out.println(Arrays.toString(d));
+
+            int[] e = {64,3,2,10,12,1,5,6};
+            Sorts.selectionSort(e);
+            System.out.println(Arrays.toString(e));
       }
 
 }
