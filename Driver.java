@@ -29,17 +29,21 @@ public class Driver{
         }
       }else if(args[2].equals("sorted")){
         int i = 0;
+        int x = 0;
         int temp = Math.abs(rnd.nextInt());
         while (i  < length){
-          randData[i] = temp + i;
+          randData[i] = temp + x;
           i = i + 1;
+          x = x + 1;
         }
       }else if(args[2].equals("reversed")){
         int i = 0;
+        int x = 0;
         int temp = Math.abs(rnd.nextInt());
         while (i  < length){
-          randData[i] = temp - i;
+          randData[i] = temp - x;
           i = i + 1;
+          x = x + 1;
         }
       }
 
