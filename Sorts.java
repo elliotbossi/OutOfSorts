@@ -30,18 +30,23 @@ public class Sorts{
 
   public static void selectionSort(int[] data){
     int i = 0;
+    boolean a = false;
     while (i < data.length){
       int x = i;
       int result = i;
       while (x < data.length){
         if (data[result]>data[x]){
           result = x;
+          a = true;
         }
         x += 1;
       }
       int temp = data[i];
       data[i] = data[result];
       data[result] = temp;
+      if (!a){
+        return;
+      }
       i += 1;
     }
   }
