@@ -8,6 +8,7 @@ public class Sorts{
     int i = 0;
     int p = 0;
     int temp = 0;
+    boolean x = false;
     while (p < data.length){
       i = 0;
       while (i < data.length-1){
@@ -16,8 +17,12 @@ public class Sorts{
           temp = data[i];
           data[i] = data[i+1];
           data[i+1] = temp;
+          x = true;
         }
         i += 1;
+      }
+      if (!x){
+        return;
       }
       p += 1;
     }
