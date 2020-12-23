@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 public class Driver{
   public static void main(String[]args){
     if(args.length < 2){
@@ -11,14 +12,35 @@ public class Driver{
       int[] randData = new int[Integer.parseInt(args[0])];
 
       //overhead: 1 random array generation.
+      Random rnd = new Random();
+      int length = randData.length;
       if(args.length < 3 || args[2].equals("random")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+	      int i = 0;
+        while (i  < length){
+          randData[i] = rnd.nextInt();
+          i = i + 1;
+        }
       }else if(args[2].equals("equal")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+	      int i = 0;
+        int temp = rnd.nextInt();
+        while (i  < length){
+          randData[i] = temp;
+          i = i + 1;
+        }
       }else if(args[2].equals("sorted")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        int i = 0;
+        int temp = Math.abs(rnd.nextInt());
+        while (i  < length){
+          randData[i] = temp + i;
+          i = i + 1;
+        }
       }else if(args[2].equals("reversed")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        int i = 0;
+        int temp = Math.abs(rnd.nextInt());
+        while (i  < length){
+          randData[i] = temp - i;
+          i = i + 1;
+        }
       }
 
       if(args[1].equals("bubble")){
@@ -44,19 +66,19 @@ public class Driver{
         Sorts.selectionSort(randDataSelection);
         Sorts.insertionSort(randDataInsertion);
 
-        if( Arrays.equals(randData,randDataBubble)){
+        if(Arrays.equals(randData,randDataBubble)){
           System.out.println("Bubble Correct!");
         }else{
          System.out.println("Bubble Not Correct!!!!!!!!!11oneeleven");
         }
 
-        if( Arrays.equals(randData,randDataSelection)){
+        if(Arrays.equals(randData,randDataSelection)){
           System.out.println("Selection Correct!");
         }else{
          System.out.println("Selection Not Correct!!!!!!!!!11oneeleven");
         }
 
-        if( Arrays.equals(randData,randDataInsertion)){
+        if(Arrays.equals(randData,randDataInsertion)){
           System.out.println("Insertion Correct!");
         }else{
          System.out.println("Insertion Not Correct!!!!!!!!!11oneeleven");
